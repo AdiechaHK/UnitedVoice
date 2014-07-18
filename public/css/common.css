@@ -1,0 +1,204 @@
+.navbar-fixed-top {
+  /*background-image: url('http://www.fas.org/irp/imint/docs/rst/Sect19/2004-09-07-E0200481-medium.jpg')*/
+}
+
+.navbar-fixed-top .navbar-brand {
+  font-size: 30px; 
+  line-height: 35px;
+  /*font-family: 'Overlock', serif;*/
+  font-family: 'Capriola', sans-serif;
+/*font-family: 'Ruluko', sans-serif;*/
+}
+.navbar-fixed-top .navbar-brand:hover {
+  text-shadow: 1px -1px 1px rgb(180, 180, 180);
+  color: rgb(90, 90, 90);
+}
+
+body  #wrap > .container {
+/*  padding: 20px 15px 0px;
+  margin-top: 66px;
+*/}
+
+body {
+/*  background-image: url('../img/bg.png');
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+*/}
+
+.panel-body {
+padding: 15px;
+background-color: rgba(43, 37, 37, 0.83);
+border-radius: 0px 0px 4px 4px;
+}
+
+.modal.fade {
+  color: black;
+}
+
+.codegeeks-block {
+    background: #4d4848;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+
+/****************/
+/* Form styling */
+/****************/
+.codegeeks-bigform textarea {
+    resize: none;
+}
+
+.codegeeks-form {
+    /* Size and position */
+    /*width: 300px;*/
+    width: auto;
+    margin: 0px auto 0px;
+    padding: 10px;
+    position: relative;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: white;
+    text-shadow: 0 2px 1px rgba(0,0,0,0.3);
+}
+
+.codegeeks-form h1 {
+    font-size: 22px;
+    padding-bottom: 20px;
+}
+
+.codegeeks-form input[type=text],
+.codegeeks-form input[type=password] {
+    /* Size and position */
+    width: 100%;
+    padding: 8px 4px 8px 10px;
+    margin-bottom: 15px;
+
+    /* Styles */
+    border: 1px solid #4e3043; /* Fallback */
+    border: 1px solid rgba(78,48,67, 0.8);
+    background: rgba(136,136,136,1);
+    border-radius: 2px;
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1);
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+    color: #fff;
+    font-size: 13px;
+}
+
+/* Placeholder style (from http://stackoverflow.com/questions/2610497/change-an-inputs-html5-placeholder-color-with-css) */
+
+.codegeeks-form input::-webkit-input-placeholder {
+    color: rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.codegeeks-form input:-moz-placeholder {
+    color: rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.codegeeks-form input:-ms-input-placeholder {
+    color: rgba(255,255,255,0.5);
+    text-shadow: 0 1px 0 rgba(255,255,255,0.15);
+}
+
+.codegeeks-form input[type=text]:hover,
+.codegeeks-form input[type=password]:hover {
+    border-color: #333;
+}
+
+.codegeeks-form input[type=text]:focus,
+.codegeeks-form input[type=password]:focus,
+.codegeeks-form input[type=submit]:focus {
+    box-shadow: 
+        0 1px 0 rgba(255,255,255,0.2), 
+        inset 0 1px 1px rgba(0,0,0,0.1),
+        0 0 0 3px rgba(255,255,255,0.15);
+    outline: none;
+}
+.codegeeks-form input[type=text]:focus,
+.codegeeks-form input[type=password]:focus {
+    background: #000;
+}
+
+/* Fallback */
+.no-boxshadow .codegeeks-form input[type=text]:focus,
+.no-boxshadow .codegeeks-form input[type=password]:focus {
+    outline: 1px solid white;
+}
+
+.codegeeks-form input[type=submit] {
+    /* Size and position */
+    width: 100%;
+    padding: 8px 5px;
+    
+    /* Styles */
+    background: #634056;
+    /*background: -moz-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: -ms-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: -o-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(99,64,86,0.5)), to(rgba(76,49,65,0.7)));
+    background: -webkit-linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));
+    background: linear-gradient(rgba(99,64,86,0.5), rgba(76,49,65,0.7));    
+    */border-radius: 5px;
+    border: 1px solid #4e3043;
+    box-shadow: inset 0 1px rgba(255,255,255,0.4), 0 2px 1px rgba(0,0,0,0.1);
+    cursor: pointer;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+
+    /* Font styles */
+    color: white;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.3);
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Raleway', 'Lato', Arial, sans-serif;
+}
+
+.codegeeks-form input[type=submit]:hover {
+    box-shadow: 
+        inset 0 1px rgba(255,255,255,0.2), 
+        inset 0 20px 30px rgba(99,64,86,0.5);
+}
+
+/* Fallback */
+.no-boxshadow .codegeeks-form input[type=submit]:hover {
+    background: #594642;
+}
+
+.codegeeks-form label {
+    display: none;
+    padding: 0 0 5px 2px;
+    cursor: pointer;
+}
+
+.codegeeks-form label:hover ~ input {
+    border-color: #333;
+}
+
+.no-placeholder .codegeeks-form label {
+    display: block;
+}
+
+/**********************************************/
+/*  ADMIN related CSS                         */
+/**********************************************/
+
+ul.nav.navbar-nav.navbar-right li.dropdown a.dropdown-toggle {
+    padding: 22px;
+}

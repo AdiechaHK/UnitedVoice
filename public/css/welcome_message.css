@@ -1,0 +1,8 @@
+.commentsBlock {
+  display: none;
+  margin-top: 15px;
+}
+
+.liked {
+  color: red !important;
+}
