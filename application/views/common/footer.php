@@ -6,5 +6,10 @@
     <?php foreach ($js as $script_name) { ?>
     <script src=<?php echo "\"".base_url("public/js/".$script_name.".js")."\""; ?>></script>
     <?php } ?>
+    <script type="text/javascript">
+	    $(document).ready(function() {
+	      $('#list').dataTable();
+	    });
+    </script>
   </body>
 </html>

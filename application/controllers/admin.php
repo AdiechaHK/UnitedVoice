@@ -92,15 +92,17 @@ class Admin extends CI_Controller {
     $user = $this->session->userdata("user");
     $data = array();
     if($user != NULL) {
-      $data['user'] = $user;      
-      render_page($this, 'admin_songs', $data, array(), true);
+      $data['user'] = $user;
+      $query = $this->db->get('user_post');
+      $data['rows'] = $query->result_array();
+      render_page($this, 'admin_songs', $data, array('dataTable'), true);
     } else {
       $login_error = $this->session->userdata("login_error");
       $this->session->unset_userdata('login_error');        
       if($login_error != NULL) {
         $data['login_error'] = $login_error;
       }
-      render_page($this, 'admin_login', $data);
+      render_page($this, 'admin_login', $data );
     }
   }
 

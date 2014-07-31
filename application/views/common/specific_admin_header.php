@@ -13,7 +13,7 @@
           <?=($active_page == "admin_home"? '<li class="active"><a href="#">Home</a></li>': '<li>'.anchor('admin', "Home").'</li>') ?>
           <?=($active_page == "admin_presidental"? '<li class="active"><a href="#">Presidental</a></li>': '<li>'.anchor('admin/presidental', "Presidental").'</li>') ?>
           <?=($active_page == "admin_sector"? '<li class="active"><a href="#">Sector</a></li>': '<li>'.anchor('admin/sector', "Sector").'</li>') ?>
-          <?=($active_page == "admin_songs"? '<li class="active"><a href="#">Songs</a></li>': '<li>'.anchor('admin/songs', "Songs").'</li>') ?>
+          <?=($active_page == "admin_songs"? '<li class="active"><a href="#">Songs</a></li>': '<li>'.anchor('song', "Songs").'</li>') ?>
 <!-- 
           <li><a href="#">Presidental</a></li>
           <li><a href="#">Sector</a></li>
