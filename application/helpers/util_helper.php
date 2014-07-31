@@ -1,19 +1,23 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-$_additional_modules_info = array(
-  /*
-  'module_name'=> array(
-    'css'=> array('css1', 'css2'),
-    'js'=> array('js1', 'js2')
-    )
-  */
-  );
 
 if ( ! function_exists('render_page'))
 {
   
   function render_page($controller, $name, $data = array(), $additional_module = array(), $isAdmin = false)
   {
+    $_additional_modules_info = array(
+      /*
+      'module_name'=> array(
+        'css'=> array('css1', 'css2'),
+        'js'=> array('js1', 'js2')
+        )
+      */
+      'dataTable'=> array(
+        'css'=> array('jquery.dataTables.min'),
+        'js'=> array('jquery.dataTables.min')
+        )
+      );
     $css_list = array($name);
     $js_list = array($name);
     foreach ($additional_module as $module) {
