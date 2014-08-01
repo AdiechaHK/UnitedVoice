@@ -16,10 +16,16 @@ if ( ! function_exists('render_page'))
       'dataTable'=> array(
         'css'=> array('jquery.dataTables.min'),
         'js'=> array('jquery.dataTables.min')
+        ),
+      'mediaElement'=> array(
+        'css'=> array('mediaelementplayer.min'),
+        'js'=> array('mediaelement-and-player.min'),
         )
       );
-    $css_list = array($name);
-    $js_list = array($name);
+    // $css_list = array($name);
+    // $js_list = array($name);
+    $css_list = array();
+    $js_list = array();
     foreach ($additional_module as $module) {
       if (array_key_exists($module, $_additional_modules_info)) {
         $module_details = $_additional_modules_info[$module];
@@ -34,7 +40,8 @@ if ( ! function_exists('render_page'))
       } else {
         // echo $module." module need to add in util helper";
       }
-
+      array_push($css_list, $name);
+      array_push($js_list, $name);
     }
     $controller->load->view('common/header', array('css'=> $css_list));
     if($isAdmin) {
