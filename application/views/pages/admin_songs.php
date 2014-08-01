@@ -1,10 +1,10 @@
 <div>
   <h1>Songs</h1>
+  <?php echo anchor('song/edit', 'Add', 'class="btn btn-success"'); ?>
   <table class="table table-striped" id="list">
-  	<thead>
-  		<tr>
-  			<th>Songs</th>
-        <?php echo anchor('song/edit', 'Add', 'class="btn btn-success"'); ?>
+    <thead>
+      <tr>
+        <th>Songs</th>
   		</tr>
   	</thead>
   	<tbody>

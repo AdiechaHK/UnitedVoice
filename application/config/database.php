@@ -54,7 +54,7 @@ $db['default']['password'] = '43F&@Gh3t8F.';
 $db['default']['database'] = 'ingenius_united_voice';
 */
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
+$db['default']['password'] = 'mysql';
 $db['default']['database'] = 'united_voice';
 
 $db['default']['dbdriver'] = 'mysql';

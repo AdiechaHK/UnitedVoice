@@ -1,6 +1,12 @@
 <nav role="navigation" class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
-    <h1 style="color:white;">{{Audio Player}}</h1>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav"> 
+         <li>
+            <audio id="mejs" src="<?php echo base_url('php_uploads/'.$songs[0]['name']) ?>" type="audio/mp3" controls="controls" hieght="50px"></audio>
+        </li>
+      </ul>
+    </div>
   </div>
 </nav>
 <div style="margin-top: 90px" class="container">
@@ -123,14 +129,14 @@
     </ul>
     <!-- Nav tabs -->
     <ul class="nav nav-tabs">
-      <li class="active"><a href="#pnews" data-toggle="tab">News feeds</a></li>
-      <li><a href="#pmedia" data-toggle="tab">Media</a></li>
+      <li><a href="#pnews" data-toggle="tab">News feeds</a></li>
+      <li class="active"><a href="#pmedia" data-toggle="tab">Media</a></li>
       <li><a href="#pdev" data-toggle="tab">Development</a></li>
     </ul>
 
     <!-- Tab panes -->
     <div class="tab-content">
-      <div class="tab-pane active" id="pnews">
+      <div class="tab-pane" id="pnews">
 
         <?php foreach ($list_of_pnews as $key => $pnews) { ?>
           <div class="news-block">
@@ -167,8 +173,17 @@
           </div>
         <?php } ?>
       </div>
-      <div class="tab-pane" id="pmedia">
-        Media related things
+      <div class="tab-pane active" id="pmedia">
+        <?php foreach ($songs as $s): ?>
+          <div class="media">
+            <a class="pull-left" href="<?php echo base_url('php_uploads/'.$s['name']) ?>">
+              <span class="glyphicon glyphicon-music"></span>
+            </a>
+            <div class="media-body">
+              <h4 class="media-heading"><?= $s['actual_name'] ?></h4>
+            </div>
+          </div>
+        <?php endforeach ?>
       </div>
       <div class="tab-pane" id="pdev">
         Development

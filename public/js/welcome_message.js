@@ -106,3 +106,69 @@ $(document).ready(function() {
     alert("Test: " + $(this).attr("href"));
   });
 });
+
+// player
+$(function(){
+    $('video,audio').mediaelementplayer({
+      // shows debug errors on screen
+      enablePluginDebug: false,
+      // remove or reorder to change plugin priority
+      plugins: ['flash','silverlight'],
+      // specify to force MediaElement to use a particular video or audio type
+      type: '',
+      // path to Flash and Silverlight plugins
+      pluginPath: '/build/',
+      // name of flash file
+      flashName: 'flashmediaelement.swf',
+      // name of silverlight file
+      silverlightName: 'silverlightmediaelement.xap',
+      // default if the <video width> is not specified
+      defaultVideoWidth: 480,
+      // default if the <video height> is not specified    
+      defaultVideoHeight: 270,
+      // overrides <video width>
+      pluginWidth: -1,
+      // overrides <video height>      
+      pluginHeight: -1,
+      // rate in milliseconds for Flash and Silverlight to fire the timeupdate event
+      // larger number is less accurate, but less strain on plugin->JavaScript bridge
+      timerRate: 250,
+        success: function (mediaElement, domObject) {
+            mediaElement.addEventListener('ended', function (e) {
+                mejsPlayNext(e.target);
+            }, false);
+        },
+        keyActions: []
+    });
+
+    $('.media a').click(function(e) {
+        e.preventDefault();
+        $(this).addClass('current').siblings().removeClass('current');
+        var audio_src = $(this).attr('href');
+        $('audio#mejs:first').each(function(){
+            this.player.pause();
+            this.player.setSrc(audio_src);
+            this.player.play();
+        });
+    });
+
+});
+
+// function mejsPlayNext(currentPlayer) {
+//     if ($('.media a.current').length > 0){ // get the .current song
+//         var current_item = $('.media a.current:first'); // :first is added if we have few .current classes
+//         var audio_src = $(current_item).next().attr('href');
+//         $(current_item).next().addClass('current').siblings().removeClass('current');
+//     }else{ // if there is no .current class
+//         var current_item = $('.media a:first'); // get :first if we don't have .current class
+//         var audio_src = $(current_item).next().attr('href');
+//         $(current_item).next().addClass('current').siblings().removeClass('current');
+//     }
+
+//     if( $(current_item).is(':last-child') ) { // if it is last - stop playing
+//         $(current_item).removeClass('current');
+//     }else{
+//         currentPlayer.setSrc(audio_src);
+//         currentPlayer.play();
+//     }
+// }
