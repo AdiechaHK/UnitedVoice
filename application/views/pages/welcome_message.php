@@ -3,7 +3,11 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav"> 
          <li>
-            <audio id="mejs" src="<?php echo base_url('php_uploads/'.$songs[0]['name']) ?>" type="audio/mp3" controls="controls" hieght="50px"></audio>
+            <audio id="mejs" type="audio/mp3" controls="controls">
+                <?php foreach ($songs as $song): ?>
+                <source src="<?php echo base_url('php_uploads/'.$song['name']) ?>" title="<?php echo $song['actual_name'] ?>"></source>
+                <?php endforeach ?>
+            </audio>
         </li>
       </ul>
     </div>

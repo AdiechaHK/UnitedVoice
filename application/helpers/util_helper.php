@@ -18,8 +18,8 @@ if ( ! function_exists('render_page'))
         'js'=> array('jquery.dataTables.min')
         ),
       'mediaElement'=> array(
-        'css'=> array('mediaelementplayer.min'),
-        'js'=> array('mediaelement-and-player.min'),
+        'css'=> array('mediaelementplayer.min', 'mep-feature-playlist'),
+        'js'=> array('mediaelement-and-player.min', 'mep-feature-playlist'),
         )
       );
     // $css_list = array($name);
